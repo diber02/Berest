@@ -1,18 +1,14 @@
 #include "stdio.h"
 #include "stdarg.h"
 
-
 int zap(int N, ... ) ;
 
 int main ()
 {
-
 int result = zap;
 
  return 0;
-
 }
-
 
 int zap(int N, ... ) {
 
