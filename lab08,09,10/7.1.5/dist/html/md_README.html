@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 07: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 07
+   &#160;<span id="projectnumber">7.1.5</span>
+   </div>
+   <div id="projectbrief">Визначити чи є задане число простим менше наступного</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><b>Визначити</b> чи є задане число простим.</li>
+</ol>
+<p><b>Виконання роботи</b></p><ol type="1">
+<li><b>Функціональне призначення</b> Програма призначена для визначення визначення чи є простим задане число</li>
+<li>Написання коду програми</li>
+</ol>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int <a class="el" href="main_8c.html#a6c0ce3059818e6073803bc7067e92fba">calc_result()</a>; int <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Головна функція.">main()</a> { int a = 17 ; int b = 2 ; int c = 0; int result;</p>
+<p>int res = calc_result(a, b, c, result);</p>
+<pre class="fragment">return 0;
+</pre><p> }</p>
+<p>int <a class="el" href="main_8c.html#a799e352f51ba6166c734a6c3e3f83140" title="@function calc_result">calc_result(int a, int b, int c, int result )</a> {</p>
+<p>for ( a &gt; 1 ; b &lt; a; b ++ ) { c = a % b; <br  />
+ }</p>
+<p>if (c == 0) { result = 0; } else if ( c == 1){ result = 1; }</p>
+<p>return result; }</p>
+<ol type="1">
+<li>Компіяція програми та перевірка на правильність її роботи через nemiver</li>
+</ol>
+<p><img src="file:///Домашняя_папка/Berest/lab08,09,10/7.1.5/doc/715_nemiver.png" alt="text" class="inline"/> <br  />
+</p>
+<p>4.Блок-схема</p>
+<p><img src="file:///home/Berest/lab08,09,10/7.1.5/doc/7.1.5(1).png" alt="text" class="inline"/> <br  />
+</p>
+<dl class="section author"><dt>Автор</dt><dd>Berest D. </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>20-dec-2020 </dd></dl>
+<dl class="section version"><dt>Версія</dt><dd>7.1.5 </dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

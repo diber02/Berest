@@ -1,0 +1,147 @@
+\hypertarget{main_8c}{}\doxysection{Файл src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Файл з демонстрацією роботи структури та методів оперування ним.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Діаграма включених заголовочних файлів для main.\+c\+:
+% FIG 0
+\doxysubsection*{Макровизначення}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~5
+\end{DoxyCompactItemize}
+\doxysubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ad92d205334386ebca2671c8a14fecd1d}{zap\+\_\+arr}} (int arr\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Головна функція. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a7ce1b73e21ac81fb5927d0dcf5cdbc24}{sort\+\_\+down}} (int arr\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{main_8c_add700733a676ac5a7935d52dadb9c93d}{sort\+\_\+up}} (int arr\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Файл з демонстрацією роботи структури та методів оперування ним. 
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Опис макровизначень}
+\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{main.c@{main.c}!N@{N}}
+\index{N@{N}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~5}
+
+
+
+\doxysubsection{Опис функцій}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Головна функція. 
+
+Послідовність дій\+:
+\begin{DoxyItemize}
+\item Оголошення змінних 
+\begin{DoxyParams}{Аргументи}
+{\em arr\mbox{[}$\,$\mbox{]}} & Наш вхідний масив \\
+\hline
+{\em symbol} & Наш флаг, який буде вирішальним для сортурвання \\
+\hline
+{\em N} & Розмір масиву\\
+\hline
+\end{DoxyParams}
+
+\item Вивід результату роботи функції @funcion sort\+\_\+up або @funcion sort\+\_\+down
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Повертає}
+успішний код повернення з програми (0) 
+\end{DoxyReturn}
+Граф всіх викликів цієї функції\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_a7ce1b73e21ac81fb5927d0dcf5cdbc24}\label{main_8c_a7ce1b73e21ac81fb5927d0dcf5cdbc24}} 
+\index{main.c@{main.c}!sort\_down@{sort\_down}}
+\index{sort\_down@{sort\_down}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sort\_down()}{sort\_down()}}
+{\footnotesize\ttfamily int sort\+\_\+down (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@function sort_down 
+\end{DoxyVerb}
+
+
+
+\begin{DoxyItemize}
+\item Послідовність дій \+:
+\item Сортування елементів масиву за зростанням , якщо
+\begin{DoxyParams}{Аргументи}
+{\em char} & = \textquotesingle{}d\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+
+\item Оголошення змінних 
+\begin{DoxyParams}{Аргументи}
+{\em temp} & \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{main_8c_add700733a676ac5a7935d52dadb9c93d}\label{main_8c_add700733a676ac5a7935d52dadb9c93d}} 
+\index{main.c@{main.c}!sort\_up@{sort\_up}}
+\index{sort\_up@{sort\_up}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sort\_up()}{sort\_up()}}
+{\footnotesize\ttfamily int sort\+\_\+up (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@function sort_up 
+\end{DoxyVerb}
+
+
+
+\begin{DoxyItemize}
+\item Послідовність дій \+:
+\item Сортування елементів масиву за зростанням , якщо
+\begin{DoxyParams}{Аргументи}
+{\em char} & = \textquotesingle{}u\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+
+\item Оголошення змінних 
+\begin{DoxyParams}{Аргументи}
+{\em temp} & \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{main_8c_ad92d205334386ebca2671c8a14fecd1d}\label{main_8c_ad92d205334386ebca2671c8a14fecd1d}} 
+\index{main.c@{main.c}!zap\_arr@{zap\_arr}}
+\index{zap\_arr@{zap\_arr}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{zap\_arr()}{zap\_arr()}}
+{\footnotesize\ttfamily int zap\+\_\+arr (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@function zap_arr
+\end{DoxyVerb}
+
+
+
+\begin{DoxyItemize}
+\item Послідовність дій \+:
+\item Заповнення масиву псевдовипадковими числами за допогою циклу 
+\end{DoxyItemize}

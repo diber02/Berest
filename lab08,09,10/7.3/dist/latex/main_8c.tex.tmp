@@ -1,0 +1,89 @@
+\hypertarget{main_8c}{}\doxysection{Файл src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Файл з демонстрацією роботи структури та методів оперування ним.  
+
+
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdarg.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для main.\+c\+:
+% FIG 0
+\doxysubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a493404bf9fb260a7aa219c398a7ed364}{zap}} (int N,...)
+\begin{DoxyCompactList}\small\item\em @function zap \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Головна функція. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Файл з демонстрацією роботи структури та методів оперування ним. 
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Опис функцій}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Головна функція. 
+
+Послідовність дій\+:
+\begin{DoxyItemize}
+\item Оголошення змінної
+\begin{DoxyParams}{Аргументи}
+{\em result} & та присвоєння їй значення @function zap\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+успішний код повернення з програми (0) 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Граф всіх викликів цієї функції\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_a493404bf9fb260a7aa219c398a7ed364}\label{main_8c_a493404bf9fb260a7aa219c398a7ed364}} 
+\index{main.c@{main.c}!zap@{zap}}
+\index{zap@{zap}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{zap()}{zap()}}
+{\footnotesize\ttfamily int zap (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+@function zap 
+
+Послідовність дій \+:
+
+
+\begin{DoxyItemize}
+\item Оголошення змінних \+: 
+\begin{DoxyParams}{Аргументи}
+{\em arr} & Наш заданий масив \\
+\hline
+{\em N} & кількість елементів у масиві \\
+\hline
+{\em res} & змінна -\/ лічильник пар \\
+\hline
+{\em elem} & елемент масиву\\
+\hline
+\end{DoxyParams}
+Перевіряємо наші числа на виконання умови
+\end{DoxyItemize}
+
+\begin{DoxyVerb}@return  успішний код повернення з програми (res)
+\end{DoxyVerb}
+ 

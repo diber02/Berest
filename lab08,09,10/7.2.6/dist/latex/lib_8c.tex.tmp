@@ -1,0 +1,88 @@
+\hypertarget{lib_8c}{}\doxysection{Файл src/lib.c}
+\label{lib_8c}\index{src/lib.c@{src/lib.c}}
+
+
+Файл з реалізацією функцій оперування тваринами  
+
+
+{\ttfamily \#include \char`\"{}lib.\+h\char`\"{}}\newline
+Діаграма включених заголовочних файлів для lib.\+c\+:
+% FIG 0
+\doxysubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{lib_8c_a0437014c8433a8a661d664dab6c6397b}{get\+\_\+animal\+\_\+type\+\_\+name}} (enum \mbox{\hyperlink{lib_8h_a41a09e9dfa7cee22ae840c59cb74313d}{animal\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em Отримання текстового представлення значення типу тварини \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lib_8c_ab4ab16cd45fb2d3250feead33d27c6ba}{generate\+\_\+animal}} (struct \mbox{\hyperlink{structanimal}{animal}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Створення даних про тварину. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lib_8c_a6d11661db937184ac42412095eff7765}{show\+\_\+animals}} (struct \mbox{\hyperlink{structanimal}{animal}} animals\mbox{[}$\,$\mbox{]}, unsigned int count)
+\begin{DoxyCompactList}\small\item\em Вивід до екрану вмісту масиву з даними про тварини. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Файл з реалізацією функцій оперування тваринами 
+
+\begin{DoxyAuthor}{Автор}
+Davydov V. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+14-\/apr-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+1.\+3 
+\end{DoxyVersion}
+
+
+\doxysubsection{Опис функцій}
+\mbox{\Hypertarget{lib_8c_ab4ab16cd45fb2d3250feead33d27c6ba}\label{lib_8c_ab4ab16cd45fb2d3250feead33d27c6ba}} 
+\index{lib.c@{lib.c}!generate\_animal@{generate\_animal}}
+\index{generate\_animal@{generate\_animal}!lib.c@{lib.c}}
+\doxysubsubsection{\texorpdfstring{generate\_animal()}{generate\_animal()}}
+{\footnotesize\ttfamily void generate\+\_\+animal (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structanimal}{animal}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Створення даних про тварину. 
+
+Функція генерує та повертає тварину з випадковими значеннями її полів 
+\begin{DoxyParams}{Аргументи}
+{\em entity} & структура \mbox{\hyperlink{structanimal}{animal}} для заповнення \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lib_8c_a0437014c8433a8a661d664dab6c6397b}\label{lib_8c_a0437014c8433a8a661d664dab6c6397b}} 
+\index{lib.c@{lib.c}!get\_animal\_type\_name@{get\_animal\_type\_name}}
+\index{get\_animal\_type\_name@{get\_animal\_type\_name}!lib.c@{lib.c}}
+\doxysubsubsection{\texorpdfstring{get\_animal\_type\_name()}{get\_animal\_type\_name()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+animal\+\_\+type\+\_\+name (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{lib_8h_a41a09e9dfa7cee22ae840c59cb74313d}{animal\+\_\+type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Отримання текстового представлення значення типу тварини 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em type} & значення перерахувааня типу тварини \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+текстове репрезентування типу 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lib_8c_a6d11661db937184ac42412095eff7765}\label{lib_8c_a6d11661db937184ac42412095eff7765}} 
+\index{lib.c@{lib.c}!show\_animals@{show\_animals}}
+\index{show\_animals@{show\_animals}!lib.c@{lib.c}}
+\doxysubsubsection{\texorpdfstring{show\_animals()}{show\_animals()}}
+{\footnotesize\ttfamily void show\+\_\+animals (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structanimal}{animal}}}]{animals\mbox{[}$\,$\mbox{]},  }\item[{unsigned int}]{count }\end{DoxyParamCaption})}
+
+
+
+Вивід до екрану вмісту масиву з даними про тварини. 
+
+Функція у циклу виводить дані на екран про кожний елемент масиву з даними про тварину у наступному форматі\+: \char`\"{}Тип\+\_\+тварини\+: зріст = ріст\+\_\+тварини см, маса = маса\+\_\+тварини гр.\char`\"{} 
+\begin{DoxyParams}{Аргументи}
+{\em animals} & масив з даними о тваринах, які необхідно вивести на екран \\
+\hline
+{\em count} & кількість тварин у переданому масиві \\
+\hline
+\end{DoxyParams}
+Граф всіх викликів цієї функції\+:
+% FIG 1

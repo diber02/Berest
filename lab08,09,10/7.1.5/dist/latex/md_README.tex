@@ -1,0 +1,52 @@
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Визначити}} чи є задане число простим.
+\end{DoxyEnumerate}
+
+{\bfseries{Виконання роботи}}
+\begin{DoxyEnumerate}
+\item {\bfseries{Функціональне призначення}} Програма призначена для визначення визначення чи є простим задане число
+\item Написання коду програми
+\end{DoxyEnumerate}
+
+\#include $<$stdio.\+h$>$
+
+int \mbox{\hyperlink{main_8c_a6c0ce3059818e6073803bc7067e92fba}{calc\+\_\+result()}}; int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} \{ int a = 17 ; int b = 2 ; int c = 0; int result;
+
+int res = calc\+\_\+result(a, b, c, result);
+
+\begin{DoxyVerb}return 0;
+\end{DoxyVerb}
+ \}
+
+int \mbox{\hyperlink{main_8c_a799e352f51ba6166c734a6c3e3f83140}{calc\+\_\+result(int a, int b, int c, int result )}} \{
+
+for ( a $>$ 1 ; b $<$ a; b ++ ) \{ c = a \% b; ~\newline
+ \}
+
+if (c == 0) \{ result = 0; \} else if ( c == 1)\{ result = 1; \}
+
+return result; \}
+
+
+\begin{DoxyEnumerate}
+\item Компіяція програми та перевірка на правильність її роботи через nemiver
+\end{DoxyEnumerate}
+
+ ~\newline
+
+
+4.Блок-\/схема
+
+ ~\newline
+
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+7.\+1.\+5 
+\end{DoxyVersion}
