@@ -1,51 +1,76 @@
 # Загальне завдання
 
-1. **Визначити** чи є задане число простим.
+1. **Відсортувати** заданий масив методом "бульбашки" зважаючи на значення флагу.
 
 **Виконання роботи**
 1. **Функціональне призначення** 
-	Програма призначена для визначення визначення чи є простим задане число 
-2. Написання коду програми
+	Програма призначена для сортування масиву за зростанням або зменшенням.
 
-#include <stdio.h>
+		#include <stdio.h>
+		#define N 5
+		
+		int zap_arr( int arr[]) {
 
-int calc_result();
-int main()
-{
-	int a = 17 ;
- 	int b = 2 ; 
- 	int c = 0;
- 	int result;
- 
- 
- 	int res = calc_result(a, b, c, result);
+		srand(time(NULL));
+		for (int i = 0; i < N; i++){
+		arr[i] = rand()% 10;
+      		}
+  		}
+  		
+			 int main()
+			{
+			    int arr[N];
+			    char symbol = 'u';
+			    
+			    zap_arr(arr);
+			    
+			    switch (symbol) {
+				case 'u' :
+				  sort_up (arr);
+				break;
+				
+				case 'd' :
+				  sort_down(arr);
+				  break;
+			    } 
+			    
 
+			    return 0;
+			}
+			int sort_down (int arr[]) {
 
- 	return 0;
- }
- 
- int calc_result(int a, int b, int c, int result ) {
- 
-    for ( a > 1 ;  b < a; b ++ ) {
-       c = a % b;  
-       }
-       
-        if (c == 0) {
-            result = 0;
-       } else if ( c == 1){
-           result = 1;
-       }
- 
-       return result;
-      }
+			for (int i = 0; i < arr; i++) {
+				for (int j = 0; j < N-i-1; j++){
+					if ( arr[j] < arr[j+1]) {
+					int temp = arr [j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					}
+				 	}
+					}
+			  	}
+			  
+				  int sort_up (int arr[]){ 
+				 for (int i = 0; i < N; i++) {
+					    for (int j = 0; j < N-i-1; j++){
+						if ( arr[j] > arr[j+1]) {
+						int temp = arr [j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+						}
+					    }
+					}
+				   }  
   
 3. Компіяція програми та перевірка на правильність її роботи через nemiver
 
-![text] (file:///Домашняя_папка/Berest/lab08,09,10/7.1.5/doc/715_nemiver.png)   
+![] (file:///home/diana/Berest/lab08,09,10/7.2.6/doc/nemiver.png)   
 
 4.Блок-схема
 
-![text] (file:///home/Berest/lab08,09,10/7.1.5/doc/7.1.5(1).png)     	
+![] (file:///home/diana/Berest/lab08,09,10/7.2.6/doc/6.1.png)  
+
+   	
 
 @author Berest D.
 @date 20-dec-2020
