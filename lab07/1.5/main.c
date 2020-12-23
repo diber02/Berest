@@ -5,6 +5,10 @@
 
 #include <stdio.h>
 
+
+
+int calc_result();
+
 int main () {
 
 int a = 17 ;

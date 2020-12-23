@@ -5,7 +5,7 @@ int zap(int N, ... ) ;
 
 int main ()
 {
-int result = zap;
+int res = zap(7,56,4,712,789,52,3);
 
  return 0;
 }

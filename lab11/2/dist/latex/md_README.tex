@@ -1,0 +1,78 @@
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Визначити}} усі парні та невід\textquotesingle{}ємні числа вхідного масиву
+\end{DoxyEnumerate}
+
+{\bfseries{Виконання роботи}}
+\begin{DoxyEnumerate}
+\item {\bfseries{Функціональне призначення}} Програма призначена для визначення усіх парних та невід\textquotesingle{}ємних чисел вхідного масиву
+\item Написання коду програми \begin{DoxyVerb}     #define N 7   
+
+     #include <stdlib.h> 
+     int main() {
+
+     int arr[N][N];
+
+     int mas_res[N];
+
+
+     zap_arr_rand(arr);
+     calloc_mas_res(mas_res,arr);
+     sort_and_fill_mas_res(arr,mas_res);
+
+
+     return 0;
+     }      
+     int zap_arr_rand (int arr[][N]){
+
+     for (int i = 0; i < N; i++) {
+     for (int j = 0; j < N; j++) {
+     *(*(arr + i)+j)= rand()%50-50;
+     }
+     }
+     return arr;
+     }
+     int calloc_mas(int mas_res[]) {
+
+     for (int i = 0; i < N; i++) {
+     int *mas_res = calloc (N,sizeof(int));
+     }
+     }
+     int sort_and_fill_mas_res(int mas_res[], int arr[][N]) {
+
+     for (int i = 0; i < N; i++) {
+     for (int j = 0; j < N; j++) {
+
+     if ( *(*(arr + i ) + j ) % 2 == 0 && *(*(arr + i ) + j ) > 0) {
+     *(mas_res + i) =  *(*(arr + i ) + j ) ;
+     }
+     }
+     }
+     for(int i=0;*(mas_res+i)!= 0; i++){
+     printf("%d ", *(mas_res+i));
+
+
+     }
+     }
+\end{DoxyVerb}
+
+\item Компіяція програми та перевірка на правильність її роботи через nemiver
+\end{DoxyEnumerate}
+
+!\mbox{[}\mbox{]} (\href{file:///home/diana/Berest/lab08,09,10/7.1.5/doc/nemiver.png}{\texttt{ file\+:///home/diana/\+Berest/lab08,09,10/7.\+1.\+5/doc/nemiver.\+png}} ~\newline
+
+
+4.Блок-\/схема
+
+ ~\newline
+
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+7.\+1.\+5 
+\end{DoxyVersion}

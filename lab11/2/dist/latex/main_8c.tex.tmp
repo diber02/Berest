@@ -1,0 +1,130 @@
+\hypertarget{main_8c}{}\doxysection{Файл src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Файл з демонстрацією роботи структури та методів оперування ним.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Діаграма включених заголовочних файлів для main.\+c\+:
+% FIG 0
+\doxysubsection*{Макровизначення}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~7
+\end{DoxyCompactItemize}
+\doxysubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Головна функція. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a60eb364df89f342eeafbf56a42459b45}{zap\+\_\+arr\+\_\+rand}} (int arr\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em @function zap\+\_\+arr\+\_\+rand \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_abae8456ba468b66e2809854cf5ed91fd}{sort\+\_\+and\+\_\+fill\+\_\+mas\+\_\+res}} (int mas\+\_\+res\mbox{[}$\,$\mbox{]}, int arr\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em @function sort\+\_\+and\+\_\+fill\+\_\+mas\+\_\+res \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Файл з демонстрацією роботи структури та методів оперування ним. 
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Опис макровизначень}
+\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{main.c@{main.c}!N@{N}}
+\index{N@{N}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~7}
+
+
+
+\doxysubsection{Опис функцій}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Головна функція. 
+
+Послідовність дій\+:
+\begin{DoxyItemize}
+\item Оголошення змінних 
+\begin{DoxyParams}{Аргументи}
+{\em arr} & Наш віхдний масив \\
+\hline
+{\em mas\+\_\+res} & Результуючий масив\\
+\hline
+\end{DoxyParams}
+
+\item Вивід результату роботи фунуції @function zap\+\_\+arr\+\_\+rand
+\item Вивід результату роботи фунуції @function sort\+\_\+and\+\_\+fill\+\_\+mas\+\_\+res
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Повертає}
+успішний код повернення з програми (0) 
+\end{DoxyReturn}
+Граф всіх викликів цієї функції\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_abae8456ba468b66e2809854cf5ed91fd}\label{main_8c_abae8456ba468b66e2809854cf5ed91fd}} 
+\index{main.c@{main.c}!sort\_and\_fill\_mas\_res@{sort\_and\_fill\_mas\_res}}
+\index{sort\_and\_fill\_mas\_res@{sort\_and\_fill\_mas\_res}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sort\_and\_fill\_mas\_res()}{sort\_and\_fill\_mas\_res()}}
+{\footnotesize\ttfamily int sort\+\_\+and\+\_\+fill\+\_\+mas\+\_\+res (\begin{DoxyParamCaption}\item[{int}]{mas\+\_\+res\mbox{[}$\,$\mbox{]},  }\item[{int}]{arr\mbox{[}$\,$\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+@function sort\+\_\+and\+\_\+fill\+\_\+mas\+\_\+res 
+
+Послідовність дій\+:
+
+
+\begin{DoxyItemize}
+\item Через цикли перевіряємо масив за умови що елемент масиву повинен
+\item ділитися без остачі на 2, та повинен бути більшим за нуль
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Повертає}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументи}
+{\em mas\+\_\+res.} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a60eb364df89f342eeafbf56a42459b45}\label{main_8c_a60eb364df89f342eeafbf56a42459b45}} 
+\index{main.c@{main.c}!zap\_arr\_rand@{zap\_arr\_rand}}
+\index{zap\_arr\_rand@{zap\_arr\_rand}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{zap\_arr\_rand()}{zap\_arr\_rand()}}
+{\footnotesize\ttfamily int zap\+\_\+arr\+\_\+rand (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+@function zap\+\_\+arr\+\_\+rand 
+
+Послідовність дій\+:
+
+
+\begin{DoxyItemize}
+\item Через цикли заповнюємо масив псевдовипадковими числами
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Повертає}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументи}
+{\em arr\mbox{[}$\,$\mbox{]}.} & \\
+\hline
+\end{DoxyParams}
