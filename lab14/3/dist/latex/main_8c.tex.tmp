@@ -1,0 +1,94 @@
+\hypertarget{main_8c}{}\doxysection{Файл src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Файл з демонстрацією роботи структури та методів оперування ним.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Діаграма включених заголовочних файлів для main.\+c\+:
+% FIG 0
+\doxysubsection*{Макровизначення}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a78aaf4b3947d3bb2fbb9e92418178047}{determ}} (int array\mbox{[}\mbox{\hyperlink{main_8c_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}\mbox{]}, int N, F\+I\+LE $\ast$pointer)
+\begin{DoxyCompactList}\small\item\em Головна функція. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Файл з демонстрацією роботи структури та методів оперування ним. 
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+23-\/feb-\/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Опис макровизначень}
+\mbox{\Hypertarget{main_8c_a70ed59adcb4159ac551058053e649640}\label{main_8c_a70ed59adcb4159ac551058053e649640}} 
+\index{main.c@{main.c}!SIZE@{SIZE}}
+\index{SIZE@{SIZE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SIZE}{SIZE}}
+{\footnotesize\ttfamily \#define S\+I\+ZE~3}
+
+
+
+\doxysubsection{Опис функцій}
+\mbox{\Hypertarget{main_8c_a78aaf4b3947d3bb2fbb9e92418178047}\label{main_8c_a78aaf4b3947d3bb2fbb9e92418178047}} 
+\index{main.c@{main.c}!determ@{determ}}
+\index{determ@{determ}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{determ()}{determ()}}
+{\footnotesize\ttfamily int determ (\begin{DoxyParamCaption}\item[{int}]{array\mbox{[}\+S\+I\+Z\+E\mbox{]}\mbox{[}\+S\+I\+Z\+E\mbox{]},  }\item[{int}]{N,  }\item[{F\+I\+LE $\ast$}]{pointer }\end{DoxyParamCaption})}
+
+
+
+Головна функція. 
+
+@function determ
+
+Послідовність дій\+:
+\begin{DoxyItemize}
+\item Оголошення змінних 
+\begin{DoxyParams}{Аргументи}
+{\em pointer} & Створюємо покажчик для результату відкриття файлу \\
+\hline
+{\em rows} & Змінна для кількості рядків \\
+\hline
+{\em colums} & Змінна для кількості стовбців \\
+\hline
+{\em arrau\mbox{[}\+S\+I\+Z\+E\mbox{]}\mbox{[}\+S\+I\+Z\+E\mbox{]}} & Масив\\
+\hline
+\end{DoxyParams}
+
+\item Вивід результату роботи фунуції @function determ
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Повертає}
+успішний код повернення з програми (0)
+\end{DoxyReturn}
+Послідовність дій\+:
+
+
+\begin{DoxyItemize}
+\item Через цикли скануємо з файлу нашу матрицю. Також за допомогою формули рахуємо детермінат 
+\end{DoxyItemize}\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Граф всіх викликів цієї функції\+:
+% FIG 1

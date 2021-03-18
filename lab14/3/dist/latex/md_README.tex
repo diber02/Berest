@@ -1,0 +1,119 @@
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Визначити кількість слів у рядку тексту.}} {\bfseries{Виконання роботи}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\bfseries{Функціональне призначення}}
+
+Визначити кількість слів у рядку тексту.
+\item Написання коду програми \begin{DoxyVerb}     #include <stdio.h>
+     #include <stdlib.h>
+     #define SIZE 3
+
+
+     int determ(int array[SIZE][SIZE], int N, FILE *pointer);
+
+     int main () 
+     {
+         FILE *pointer;
+
+         pointer = fopen("matrix.txt", "a+");
+         int rows; // кількість рядків
+         int colums; // кількість стовбчиків
+         if (pointer != NULL)
+         {
+             printf("The file has been opened successfully\n");
+             fscanf(pointer, "%d %d", &rows, &colums);
+             if(rows != colums)
+             {
+                 fclose(pointer); //завершуємо роботу з файлом
+                 printf("\nError: детермінант матриці знайти неможливо\n\n");
+                 exit(1);
+             }
+             else
+             {
+
+                 int N = rows;
+                 int array[SIZE][SIZE] = {0};
+
+                 determ(array, N, pointer);
+                 fclose(pointer); //завершуємо роботу з файлом
+             }
+         }
+
+     return 0;
+
+     }
+
+     int determ(int array[SIZE][SIZE], int N, FILE *pointer)
+     {
+         float det = 0;  //детермінант матриці
+         float a = 0; //тимчасова змінна
+
+         for(int i = 0; i < N; i++)
+         {
+             for(int j = 0; j < N; j++)
+             {
+                 fscanf(pointer, "%d", &*(*(array+i)+j));
+             }
+         }
+
+         printf("\n");
+         printf("Задана матриця:");
+         for(int i = 0; i < N; i++)
+         {
+             printf("\n");
+             for(int j = 0; j < N; j++)
+             {
+                 printf("%d ", *(*(array+i)+j));
+             }
+         }
+
+         printf("\n\n");
+
+         for(int i = 0; i < N; i++)
+         {
+             for(int j = 0; j < N; j++)
+             {
+                 if(j>i)
+                 {
+                     a = *(*(array+j)+i) / *(*(array+i)+i);
+                     for(int k = 0; k < N; k++)
+                     {
+                         *(*(array+j)+k) -= a * *(*(array+i)+k);
+                     }
+                 }
+             }
+         }
+         det = 1;
+         for(int i = 0; i < N; i++)
+         {
+             det *= *(*(array+i)+i);
+         }
+
+         printf("Детермінат матриці: %.0f\n", det);
+
+     return det;
+     }
+\end{DoxyVerb}
+
+\item Компіяція програми та перевірка на правильність її роботи через nemiver
+\end{DoxyEnumerate}
+
+ ~\newline
+
+
+4.Блок-\/схема
+
+ ~\newline
+
+
+\begin{DoxyAuthor}{Автор}
+Berest D. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+20-\/dec-\/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версія}
+7.\+1.\+5 
+\end{DoxyVersion}

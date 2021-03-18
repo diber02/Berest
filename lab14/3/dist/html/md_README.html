@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 14: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 14
+   &#160;<span id="projectnumber">14.3</span>
+   </div>
+   <div id="projectbrief">Визначити кількість слів у рядку тексту.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><b>Визначити кількість слів у рядку тексту.</b> <b>Виконання роботи</b></li>
+</ol>
+<ol type="1">
+<li><p class="startli"><b>Функціональне призначення</b></p>
+<p class="startli">Визначити кількість слів у рядку тексту.</p>
+</li>
+<li>Написання коду програми <pre class="fragment">     #include &lt;stdio.h&gt;
+     #include &lt;stdlib.h&gt;
+     #define SIZE 3
+
+
+     int determ(int array[SIZE][SIZE], int N, FILE *pointer);
+
+     int main () 
+     {
+         FILE *pointer;
+
+         pointer = fopen("matrix.txt", "a+");
+         int rows; // кількість рядків
+         int colums; // кількість стовбчиків
+         if (pointer != NULL)
+         {
+             printf("The file has been opened successfully\n");
+             fscanf(pointer, "%d %d", &amp;rows, &amp;colums);
+             if(rows != colums)
+             {
+                 fclose(pointer); //завершуємо роботу з файлом
+                 printf("\nError: детермінант матриці знайти неможливо\n\n");
+                 exit(1);
+             }
+             else
+             {
+
+                 int N = rows;
+                 int array[SIZE][SIZE] = {0};
+
+                 determ(array, N, pointer);
+                 fclose(pointer); //завершуємо роботу з файлом
+             }
+         }
+
+     return 0;
+
+     }
+
+     int determ(int array[SIZE][SIZE], int N, FILE *pointer)
+     {
+         float det = 0;  //детермінант матриці
+         float a = 0; //тимчасова змінна
+
+         for(int i = 0; i &lt; N; i++)
+         {
+             for(int j = 0; j &lt; N; j++)
+             {
+                 fscanf(pointer, "%d", &amp;*(*(array+i)+j));
+             }
+         }
+
+         printf("\n");
+         printf("Задана матриця:");
+         for(int i = 0; i &lt; N; i++)
+         {
+             printf("\n");
+             for(int j = 0; j &lt; N; j++)
+             {
+                 printf("%d ", *(*(array+i)+j));
+             }
+         }
+
+         printf("\n\n");
+
+         for(int i = 0; i &lt; N; i++)
+         {
+             for(int j = 0; j &lt; N; j++)
+             {
+                 if(j&gt;i)
+                 {
+                     a = *(*(array+j)+i) / *(*(array+i)+i);
+                     for(int k = 0; k &lt; N; k++)
+                     {
+                         *(*(array+j)+k) -= a * *(*(array+i)+k);
+                     }
+                 }
+             }
+         }
+         det = 1;
+         for(int i = 0; i &lt; N; i++)
+         {
+             det *= *(*(array+i)+i);
+         }
+
+         printf("Детермінат матриці: %.0f\n", det);
+
+     return det;
+     }
+</pre></li>
+<li>Компіяція програми та перевірка на правильність її роботи через nemiver</li>
+</ol>
+<p><img src="file:///home/diana/Berest/lab14/3/doc/comp.png" alt="" class="inline"/> <br  />
+</p>
+<p>4.Блок-схема</p>
+<p><img src="file:///home/diana/Berest/lab14/3/doc/14.png" alt="" class="inline"/> <br  />
+</p>
+<dl class="section author"><dt>Автор</dt><dd>Berest D. </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>20-dec-2020 </dd></dl>
+<dl class="section version"><dt>Версія</dt><dd>7.1.5 </dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
