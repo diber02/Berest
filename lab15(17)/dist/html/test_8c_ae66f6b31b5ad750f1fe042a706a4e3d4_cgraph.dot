@@ -1,0 +1,12 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="test_sort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_8c.html#a365b816fc37b6421a3d3d14838682565",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sort_alph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#a051c23acc1e68ce781d678c533dc5418",tooltip="@function sort_alph -сортування за алфавітом"];
+}
