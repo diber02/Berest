@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 15,17: Текст програми src/lib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 15,17
+   &#160;<span id="projectnumber">15,17</span>
+   </div>
+   <div id="projectbrief">Виконати лабороторну работу</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structcontact.html">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcontact.html#ad927267f99a68aff0790bd9c4046dfcf">   17</a></span>&#160;    <span class="keywordtype">char</span> name[20];</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcontact.html#a2c216c9c9f83fe99258be8509e6038bc">   18</a></span>&#160;    <span class="keywordtype">char</span> email[30];</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcontact.html#adf2e550b8b97acb457564c5f44bbc9c1">   19</a></span>&#160;    <span class="keywordtype">char</span> country[30];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <a class="code" href="structcontact.html">contact</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcommercial.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structcommercial.html#a3fb2bed404317033e9e5526ce7e3a8ec">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structcommercial.html#a3fb2bed404317033e9e5526ce7e3a8ec">open</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcommercial.html#abdd22824f15abf5daf4947a0bea3c56f">   24</a></span>&#160;    <span class="keywordtype">char</span> name[60];</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcommercial.html#a18745f937678ada16af3f82d53f4dc84">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcommercial.html#a18745f937678ada16af3f82d53f4dc84">summary</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcommercial.html#aacbfd537e597300cf6b1b3fa5322f494">   26</a></span>&#160;    <a class="code" href="structcontact.html">contact</a> <a class="code" href="structcommercial.html#aacbfd537e597300cf6b1b3fa5322f494">director</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7">   27</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7">development</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a73dabe8c0ce63ae7de0df3b690eb3f32">   29</a></span>&#160;        <a class="code" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a73dabe8c0ce63ae7de0df3b690eb3f32">received</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a77bf9dafefbf9e82c3e835ec61f0b218">   30</a></span>&#160;        <a class="code" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a77bf9dafefbf9e82c3e835ec61f0b218">discussion</a>, </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7ae0bb7e83438ff5c49f3e4103bf9eed5e">   31</a></span>&#160;        <a class="code" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7ae0bb7e83438ff5c49f3e4103bf9eed5e">evaluation</a>, </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a9b540caa22e2ea6c121e26a2e986a2b3">   32</a></span>&#160;        coordination</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    } stage;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <a class="code" href="structcommercial.html">commercial</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a62445a1497c3327521c1ccde94d2ce5d">read_from_file</a> (FILE *point_read, <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a73de3c5b120935aad4d47ad819484c25">write_to_file</a>(FILE *point_write,  <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a3c48953002320e3a0955ab1f37e5d36a">output</a> (<a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#aab32294799d539fbe855dd14ebd2095f">sort</a> ( <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">int</span> <a class="code" href="lib_8h.html#a051c23acc1e68ce781d678c533dc5418">sort_alph</a>(  <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a0a22dbcbd963a0985f5bd01c94e6141b">rand_fill</a>( <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a4a89b05a9fd345d52ff5e4b1891e7c65">write_binfile</a>( FILE *point_write_binfile, <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a0b594326ae4fe130c22e497fc6ced31c">read_binfile</a>( FILE* point_read_binfile, <a class="code" href="structcommercial.html">commercial</a> *greement, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alib_8h_html"><div class="ttname"><a href="lib_8h.html">lib.h</a></div><div class="ttdoc">Файл з об'явою прототипів функцій.</div></div>
+<div class="ttc" id="astructcommercial_html_a2ab71dd39fb5045c3056d1df0b8a04e7ae0bb7e83438ff5c49f3e4103bf9eed5e"><div class="ttname"><a href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7ae0bb7e83438ff5c49f3e4103bf9eed5e">commercial::evaluation</a></div><div class="ttdeci">@ evaluation</div><div class="ttdef"><b>Definition:</b> lib.h:31</div></div>
+<div class="ttc" id="alib_8c_html_a032d4aa0f29be27cd1f65de1d39d452c"><div class="ttname"><a href="lib_8c.html#a032d4aa0f29be27cd1f65de1d39d452c">bool_input</a></div><div class="ttdeci">bool bool_input(char *str)</div><div class="ttdef"><b>Definition:</b> lib.c:17</div></div>
+<div class="ttc" id="astructcommercial_html_a2ab71dd39fb5045c3056d1df0b8a04e7a73dabe8c0ce63ae7de0df3b690eb3f32"><div class="ttname"><a href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a73dabe8c0ce63ae7de0df3b690eb3f32">commercial::received</a></div><div class="ttdeci">@ received</div><div class="ttdef"><b>Definition:</b> lib.h:29</div></div>
+<div class="ttc" id="alib_8h_html_a73de3c5b120935aad4d47ad819484c25"><div class="ttname"><a href="lib_8h.html#a73de3c5b120935aad4d47ad819484c25">write_to_file</a></div><div class="ttdeci">void write_to_file(FILE *point_write, commercial *greement, int N)</div><div class="ttdoc">@function write_from_file -запис структури до файлу</div><div class="ttdef"><b>Definition:</b> lib.c:103</div></div>
+<div class="ttc" id="astructcommercial_html_a2ab71dd39fb5045c3056d1df0b8a04e7a77bf9dafefbf9e82c3e835ec61f0b218"><div class="ttname"><a href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7a77bf9dafefbf9e82c3e835ec61f0b218">commercial::discussion</a></div><div class="ttdeci">@ discussion</div><div class="ttdef"><b>Definition:</b> lib.h:30</div></div>
+<div class="ttc" id="astructcommercial_html_a3fb2bed404317033e9e5526ce7e3a8ec"><div class="ttname"><a href="structcommercial.html#a3fb2bed404317033e9e5526ce7e3a8ec">commercial::open</a></div><div class="ttdeci">bool open</div><div class="ttdef"><b>Definition:</b> lib.h:23</div></div>
+<div class="ttc" id="alib_8c_html_a5aacaba4fbea6f9b18825da94329de19"><div class="ttname"><a href="lib_8c.html#a5aacaba4fbea6f9b18825da94329de19">read_from_file</a></div><div class="ttdeci">void read_from_file(FILE *point_read, commercial greement[], int N)</div><div class="ttdef"><b>Definition:</b> lib.c:23</div></div>
+<div class="ttc" id="astructcontact_html"><div class="ttname"><a href="structcontact.html">contact</a></div><div class="ttdef"><b>Definition:</b> lib.h:15</div></div>
+<div class="ttc" id="alib_8h_html_a051c23acc1e68ce781d678c533dc5418"><div class="ttname"><a href="lib_8h.html#a051c23acc1e68ce781d678c533dc5418">sort_alph</a></div><div class="ttdeci">int sort_alph(commercial *greement, int N)</div><div class="ttdoc">@function sort_alph -сортування за алфавітом</div><div class="ttdef"><b>Definition:</b> lib.c:157</div></div>
+<div class="ttc" id="alib_8c_html_a2ca86515f5e41efe6dd2b0f7f4608abd"><div class="ttname"><a href="lib_8c.html#a2ca86515f5e41efe6dd2b0f7f4608abd">bool_output</a></div><div class="ttdeci">char * bool_output(bool b)</div><div class="ttdef"><b>Definition:</b> lib.c:12</div></div>
+<div class="ttc" id="astructcommercial_html_aacbfd537e597300cf6b1b3fa5322f494"><div class="ttname"><a href="structcommercial.html#aacbfd537e597300cf6b1b3fa5322f494">commercial::director</a></div><div class="ttdeci">contact director</div><div class="ttdef"><b>Definition:</b> lib.h:26</div></div>
+<div class="ttc" id="alib_8h_html_a4a89b05a9fd345d52ff5e4b1891e7c65"><div class="ttname"><a href="lib_8h.html#a4a89b05a9fd345d52ff5e4b1891e7c65">write_binfile</a></div><div class="ttdeci">void write_binfile(FILE *point_write_binfile, commercial *greement, int N)</div><div class="ttdoc">@function write_binfile -запис до бінарного файлу</div><div class="ttdef"><b>Definition:</b> lib.c:224</div></div>
+<div class="ttc" id="alib_8c_html_aab32294799d539fbe855dd14ebd2095f"><div class="ttname"><a href="lib_8c.html#aab32294799d539fbe855dd14ebd2095f">sort</a></div><div class="ttdeci">void sort(commercial *greement, int N)</div><div class="ttdoc">@function sort - сортування за зростанням Суми</div><div class="ttdef"><b>Definition:</b> lib.c:131</div></div>
+<div class="ttc" id="alib_8h_html_a62445a1497c3327521c1ccde94d2ce5d"><div class="ttname"><a href="lib_8h.html#a62445a1497c3327521c1ccde94d2ce5d">read_from_file</a></div><div class="ttdeci">void read_from_file(FILE *point_read, commercial *greement, int N)</div><div class="ttdoc">@function read_from_file -читання з файлу даних для полів стуктури</div></div>
+<div class="ttc" id="alib_8h_html_a3c48953002320e3a0955ab1f37e5d36a"><div class="ttname"><a href="lib_8h.html#a3c48953002320e3a0955ab1f37e5d36a">output</a></div><div class="ttdeci">void output(commercial *greement, int N)</div><div class="ttdoc">@function output -виведення структури до терміналу</div><div class="ttdef"><b>Definition:</b> lib.c:64</div></div>
+<div class="ttc" id="astructcommercial_html_a18745f937678ada16af3f82d53f4dc84"><div class="ttname"><a href="structcommercial.html#a18745f937678ada16af3f82d53f4dc84">commercial::summary</a></div><div class="ttdeci">int summary</div><div class="ttdef"><b>Definition:</b> lib.h:25</div></div>
+<div class="ttc" id="alib_8c_html_a4a89b05a9fd345d52ff5e4b1891e7c65"><div class="ttname"><a href="lib_8c.html#a4a89b05a9fd345d52ff5e4b1891e7c65">write_binfile</a></div><div class="ttdeci">void write_binfile(FILE *point_write_binfile, commercial *greement, int N)</div><div class="ttdoc">@function write_binfile -запис до бінарного файлу</div><div class="ttdef"><b>Definition:</b> lib.c:224</div></div>
+<div class="ttc" id="alib_8h_html_aab32294799d539fbe855dd14ebd2095f"><div class="ttname"><a href="lib_8h.html#aab32294799d539fbe855dd14ebd2095f">sort</a></div><div class="ttdeci">void sort(commercial *greement, int N)</div><div class="ttdoc">@function sort - сортування за зростанням Суми</div><div class="ttdef"><b>Definition:</b> lib.c:131</div></div>
+<div class="ttc" id="alib_8c_html_a73de3c5b120935aad4d47ad819484c25"><div class="ttname"><a href="lib_8c.html#a73de3c5b120935aad4d47ad819484c25">write_to_file</a></div><div class="ttdeci">void write_to_file(FILE *point_write, commercial *greement, int N)</div><div class="ttdoc">@function write_from_file -запис структури до файлу</div><div class="ttdef"><b>Definition:</b> lib.c:103</div></div>
+<div class="ttc" id="alib_8h_html_a0b594326ae4fe130c22e497fc6ced31c"><div class="ttname"><a href="lib_8h.html#a0b594326ae4fe130c22e497fc6ced31c">read_binfile</a></div><div class="ttdeci">void read_binfile(FILE *point_read_binfile, commercial *greement, int N)</div><div class="ttdoc">@function read_binfile -читання з бінарного файлу</div><div class="ttdef"><b>Definition:</b> lib.c:233</div></div>
+<div class="ttc" id="astructcontact_html_adf2e550b8b97acb457564c5f44bbc9c1"><div class="ttname"><a href="structcontact.html#adf2e550b8b97acb457564c5f44bbc9c1">contact::country</a></div><div class="ttdeci">char country[30]</div><div class="ttdef"><b>Definition:</b> lib.h:19</div></div>
+<div class="ttc" id="alib_8c_html_a0a22dbcbd963a0985f5bd01c94e6141b"><div class="ttname"><a href="lib_8c.html#a0a22dbcbd963a0985f5bd01c94e6141b">rand_fill</a></div><div class="ttdeci">void rand_fill(commercial *greement, int N)</div><div class="ttdoc">@function rand_fill - заповнення декулькох полів рандомними числами</div><div class="ttdef"><b>Definition:</b> lib.c:177</div></div>
+<div class="ttc" id="astructcommercial_html_ae71baba904c9797925637c2db15a4b0c"><div class="ttname"><a href="structcommercial.html#ae71baba904c9797925637c2db15a4b0c">commercial::stage</a></div><div class="ttdeci">enum commercial::development stage</div></div>
+<div class="ttc" id="alib_8c_html_a3c48953002320e3a0955ab1f37e5d36a"><div class="ttname"><a href="lib_8c.html#a3c48953002320e3a0955ab1f37e5d36a">output</a></div><div class="ttdeci">void output(commercial *greement, int N)</div><div class="ttdoc">@function output -виведення структури до терміналу</div><div class="ttdef"><b>Definition:</b> lib.c:64</div></div>
+<div class="ttc" id="astructcontact_html_a2c216c9c9f83fe99258be8509e6038bc"><div class="ttname"><a href="structcontact.html#a2c216c9c9f83fe99258be8509e6038bc">contact::email</a></div><div class="ttdeci">char email[30]</div><div class="ttdef"><b>Definition:</b> lib.h:18</div></div>
+<div class="ttc" id="alib_8h_html_a0a22dbcbd963a0985f5bd01c94e6141b"><div class="ttname"><a href="lib_8h.html#a0a22dbcbd963a0985f5bd01c94e6141b">rand_fill</a></div><div class="ttdeci">void rand_fill(commercial *greement, int N)</div><div class="ttdoc">@function rand_fill - заповнення декулькох полів рандомними числами</div><div class="ttdef"><b>Definition:</b> lib.c:177</div></div>
+<div class="ttc" id="alib_8c_html_a051c23acc1e68ce781d678c533dc5418"><div class="ttname"><a href="lib_8c.html#a051c23acc1e68ce781d678c533dc5418">sort_alph</a></div><div class="ttdeci">int sort_alph(commercial *greement, int N)</div><div class="ttdoc">@function sort_alph -сортування за алфавітом</div><div class="ttdef"><b>Definition:</b> lib.c:157</div></div>
+<div class="ttc" id="astructcommercial_html_abdd22824f15abf5daf4947a0bea3c56f"><div class="ttname"><a href="structcommercial.html#abdd22824f15abf5daf4947a0bea3c56f">commercial::name</a></div><div class="ttdeci">char name[60]</div><div class="ttdef"><b>Definition:</b> lib.h:24</div></div>
+<div class="ttc" id="amain_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="main_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> main.c:22</div></div>
+<div class="ttc" id="alib_8c_html_a0b594326ae4fe130c22e497fc6ced31c"><div class="ttname"><a href="lib_8c.html#a0b594326ae4fe130c22e497fc6ced31c">read_binfile</a></div><div class="ttdeci">void read_binfile(FILE *point_read_binfile, commercial *greement, int N)</div><div class="ttdoc">@function read_binfile -читання з бінарного файлу</div><div class="ttdef"><b>Definition:</b> lib.c:233</div></div>
+<div class="ttc" id="astructcommercial_html_a2ab71dd39fb5045c3056d1df0b8a04e7"><div class="ttname"><a href="structcommercial.html#a2ab71dd39fb5045c3056d1df0b8a04e7">commercial::development</a></div><div class="ttdeci">development</div><div class="ttdef"><b>Definition:</b> lib.h:27</div></div>
+<div class="ttc" id="astructcommercial_html"><div class="ttname"><a href="structcommercial.html">commercial</a></div><div class="ttdef"><b>Definition:</b> lib.h:21</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
